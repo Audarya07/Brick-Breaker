@@ -41,7 +41,7 @@ const paddle = {
 function drawPaddle(){
     ctx.fillStyle = "#2e3548";
     var img =  new Image();
-    img.src = "./img/bed.png";
+    img.src = "./img/doc.png";
         ctx.drawImage(img, paddle.x, paddle.y, paddle.width, paddle.height);
 //    ctx.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
 //     ctx.strokeStyle = "#ffcd05";
