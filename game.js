@@ -13,8 +13,8 @@ ctx.lineWidth = 3;
 const PADDLE_WIDTH = 100;
 const PADDLE_MARGIN_BOTTOM = 50;
 // const PADDLE_HEIGHT = 100;
-const PADDLE_HEIGHT = 10;
-const BALL_RADIUS = 10;
+const PADDLE_HEIGHT = 30;
+const BALL_RADIUS = 20;
 /* const PADDLE_WIDTH = 100;
 const PADDLE_MARGIN_BOTTOM = 50;
 const PADDLE_HEIGHT = 20;
@@ -39,13 +39,13 @@ const paddle = {
 
 // DRAW PADDLE
 function drawPaddle(){
-    // ctx.fillStyle = "#2e3548";
-    // var img =  new Image();
-    // img.src = "./img/doc.png";
-    //     ctx.drawImage(img, paddle.x, paddle.y, paddle.width, paddle.height);
-   ctx.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
-    ctx.strokeStyle = "#ffcd05";
-    ctx.strokeRect(paddle.x, paddle.y, paddle.width, paddle.height);
+    ctx.fillStyle = "#2e3548";
+    var img =  new Image();
+    img.src = "./img/bed.png";
+        ctx.drawImage(img, paddle.x, paddle.y, paddle.width, paddle.height);
+//    ctx.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
+//     ctx.strokeStyle = "#ffcd05";
+//     ctx.strokeRect(paddle.x, paddle.y, paddle.width, paddle.height);
 }
 
 // CONTROL THE PADDLE
@@ -86,19 +86,19 @@ const ball = {
 // DRAW THE BALL
 function drawBall(){
     
-    // var img1 =  new Image();
-    // img1.src = "./img/ball.png";
-    //     ctx.drawImage(img1, ball.x, ball.y, ball.radius, ball.radius);
-    ctx.beginPath();
+    var img1 =  new Image();
+    img1.src = "./img/ball.png";
+        ctx.drawImage(img1, ball.x, ball.y, ball.radius, ball.radius);
+    // ctx.beginPath();
     
-    ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI*2);
-    ctx.fillStyle = "#ffcd05";
-    ctx.fill();
+    // ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI*2);
+    // ctx.fillStyle = "#ffcd05";
+    // ctx.fill();
     
-    ctx.strokeStyle = "#2e3548";
-    ctx.stroke();
+    // ctx.strokeStyle = "#2e3548";
+    // ctx.stroke();
     
-    ctx.closePath(); 
+    // ctx.closePath(); 
 }
 // MOVE THE BALL
 function moveBall() {
