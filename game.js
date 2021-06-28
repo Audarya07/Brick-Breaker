@@ -9,10 +9,14 @@ cvs.style.border = "1px solid #0ff";
 ctx.lineWidth = 3;
 
 // GAME VARIABLES AND CONSTANTS
-const PADDLE_WIDTH = 100;
+const PADDLE_WIDTH = 80;
+const PADDLE_MARGIN_BOTTOM = 50;
+const PADDLE_HEIGHT = 100;
+const BALL_RADIUS = 40;
+/* const PADDLE_WIDTH = 100;
 const PADDLE_MARGIN_BOTTOM = 50;
 const PADDLE_HEIGHT = 20;
-const BALL_RADIUS = 10;
+const BALL_RADIUS = 10; */
 let LIFE = 3; // PLAYER HAS 3 LIVES
 let SCORE = 0;
 const SCORE_UNIT = 10;
@@ -32,12 +36,14 @@ const paddle = {
 }
 
 // DRAW PADDLE
-function drawPaddle() {
+function drawPaddle(){
     ctx.fillStyle = "#2e3548";
-    ctx.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
-
-    ctx.strokeStyle = "black";
-    ctx.strokeRect(paddle.x, paddle.y, paddle.width, paddle.height);
+    var img =  new Image();
+    img.src = "./img/doc.png";
+        ctx.drawImage(img, paddle.x, paddle.y, paddle.width, paddle.height);
+   /*  ctx.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
+    ctx.strokeStyle = "#ffcd05";
+    ctx.strokeRect(paddle.x, paddle.y, paddle.width, paddle.height); */
 }
 
 // CONTROL THE PADDLE
@@ -76,19 +82,22 @@ const ball = {
 }
 
 // DRAW THE BALL
-function drawBall() {
-    ctx.beginPath();
-
-    ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+function drawBall(){
+    
+    var img1 =  new Image();
+    img1.src = "./img/ball.png";
+        ctx.drawImage(img1, ball.x, ball.y, ball.radius, ball.radius);
+    /* ctx.beginPath();
+    
+    ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI*2);
     ctx.fillStyle = "#ffcd05";
     ctx.fill();
-
+    
     ctx.strokeStyle = "#2e3548";
-    ctx.stroke();
-
-    ctx.closePath();
+    ctx.stroke();*/
+    
+    ctx.closePath(); 
 }
-
 // MOVE THE BALL
 function moveBall() {
     ball.x += ball.dx;
