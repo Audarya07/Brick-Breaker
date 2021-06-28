@@ -23,7 +23,7 @@ let LIFE = 3; // PLAYER HAS 3 LIVES
 let SCORE = 0;
 const SCORE_UNIT = 10;
 let LEVEL = 1;
-const MAX_LEVEL = 1;
+const MAX_LEVEL = 3;
 let GAME_OVER = false;
 let leftArrow = false;
 let rightArrow = false;
@@ -157,7 +157,7 @@ function ballPaddleCollision() {
 
 // CREATE THE BRICKS
 const brick = {
-    row: 1,
+    row: 3,
     column: 7,
     width: 55,
     height: 20,
