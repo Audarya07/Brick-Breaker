@@ -9,10 +9,12 @@ cvs.style.border = "1px solid #0ff";
 ctx.lineWidth = 3;
 
 // GAME VARIABLES AND CONSTANTS
-const PADDLE_WIDTH = 80;
+// const PADDLE_WIDTH = 80;
+const PADDLE_WIDTH = 100;
 const PADDLE_MARGIN_BOTTOM = 50;
-const PADDLE_HEIGHT = 100;
-const BALL_RADIUS = 40;
+// const PADDLE_HEIGHT = 100;
+const PADDLE_HEIGHT = 10;
+const BALL_RADIUS = 10;
 /* const PADDLE_WIDTH = 100;
 const PADDLE_MARGIN_BOTTOM = 50;
 const PADDLE_HEIGHT = 20;
@@ -21,7 +23,7 @@ let LIFE = 3; // PLAYER HAS 3 LIVES
 let SCORE = 0;
 const SCORE_UNIT = 10;
 let LEVEL = 1;
-const MAX_LEVEL = 3;
+const MAX_LEVEL = 1;
 let GAME_OVER = false;
 let leftArrow = false;
 let rightArrow = false;
@@ -37,13 +39,13 @@ const paddle = {
 
 // DRAW PADDLE
 function drawPaddle(){
-    ctx.fillStyle = "#2e3548";
-    var img =  new Image();
-    img.src = "./img/doc.png";
-        ctx.drawImage(img, paddle.x, paddle.y, paddle.width, paddle.height);
-   /*  ctx.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
+    // ctx.fillStyle = "#2e3548";
+    // var img =  new Image();
+    // img.src = "./img/doc.png";
+    //     ctx.drawImage(img, paddle.x, paddle.y, paddle.width, paddle.height);
+   ctx.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
     ctx.strokeStyle = "#ffcd05";
-    ctx.strokeRect(paddle.x, paddle.y, paddle.width, paddle.height); */
+    ctx.strokeRect(paddle.x, paddle.y, paddle.width, paddle.height);
 }
 
 // CONTROL THE PADDLE
@@ -84,17 +86,17 @@ const ball = {
 // DRAW THE BALL
 function drawBall(){
     
-    var img1 =  new Image();
-    img1.src = "./img/ball.png";
-        ctx.drawImage(img1, ball.x, ball.y, ball.radius, ball.radius);
-    /* ctx.beginPath();
+    // var img1 =  new Image();
+    // img1.src = "./img/ball.png";
+    //     ctx.drawImage(img1, ball.x, ball.y, ball.radius, ball.radius);
+    ctx.beginPath();
     
     ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI*2);
     ctx.fillStyle = "#ffcd05";
     ctx.fill();
     
     ctx.strokeStyle = "#2e3548";
-    ctx.stroke();*/
+    ctx.stroke();
     
     ctx.closePath(); 
 }
@@ -155,7 +157,7 @@ function ballPaddleCollision() {
 
 // CREATE THE BRICKS
 const brick = {
-    row: 3,
+    row: 1,
     column: 7,
     width: 55,
     height: 20,
