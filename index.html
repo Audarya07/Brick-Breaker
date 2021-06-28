@@ -7,6 +7,40 @@
     <link rel="stylesheet"
           href="http://fonts.googleapis.com/css?family=Germania+One">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="arena1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <!--   <style>* {
+        font-family: "Germania One";
+    }
+
+    #sound {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        position: absolute;
+        top: 570px;
+        left: 10px;
+    }
+
+    #gameover {
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        left: 0px;
+        /* background: rgba(0, 0, 0, 0.5); */
+        display: none;
+    }
+
+    #youwon {
+        width: 100px;
+        position: absolute;
+        top: 200px;
+        left: 150px;
+        display: none;
+    }
+
     <style>
         * {
             font-family: "Germania One";
@@ -30,14 +64,25 @@
             display: none;
         }
 
-        #youwon {
-            width: 100px;
-            position: absolute;
-            top: 200px;
-            left: 150px;
-            display: none;
-        }
+    #youlose {
+        width: 100rem;
+        height: 800px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: none;
+    }
 
+    #restart {
+        position: absolute;
+        top: 450px;
+        left: 780px;
+        cursor: pointer;
+        font-size: 1.25em;
+        color: #FFF;
+    }
+    </style> -->
+  
         #youlose {
             width: 100rem;
             height: 800px;
@@ -56,9 +101,13 @@
             color: #FFF;
         }
     </style>
-</head>
 
+</head>
 <body>
+    <div class="back">
+        <a href="landing.html" class = "home">HOME</a>
+        <a href="#" class = "title" > Kick The Covid</a>
+    </div>
     <div class="sound">
         <img src="img/SOUND_ON.png"
              alt=""
@@ -76,6 +125,11 @@
              height=60%>
         <div id="restart">Play Again!</div>
     </div>
+
+    <canvas id="breakout"
+        width="600"
+        height="600"></canvas>
+
     <div class="frame">
         <canvas id="breakout"
         width="600"
