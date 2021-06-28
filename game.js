@@ -10,7 +10,7 @@ ctx.lineWidth = 3;
 
 // GAME VARIABLES AND CONSTANTS
 // const PADDLE_WIDTH = 80;
-const PADDLE_WIDTH = 100;
+const PADDLE_WIDTH = 130;
 const PADDLE_MARGIN_BOTTOM = 50;
 // const PADDLE_HEIGHT = 100;
 const PADDLE_HEIGHT = 30;
