@@ -10,10 +10,10 @@ ctx.lineWidth = 3;
 
 // GAME VARIABLES AND CONSTANTS
 // const PADDLE_WIDTH = 80;
-const PADDLE_WIDTH = 80;
+const PADDLE_WIDTH = 100;
 const PADDLE_MARGIN_BOTTOM = 50;
 // const PADDLE_HEIGHT = 100;
-const PADDLE_HEIGHT = 100;
+const PADDLE_HEIGHT = 10;
 const BALL_RADIUS = 20;
 /* const PADDLE_WIDTH = 100;
 const PADDLE_MARGIN_BOTTOM = 50;
@@ -39,13 +39,13 @@ const paddle = {
 
 // DRAW PADDLE
 function drawPaddle(){
-    ctx.fillStyle = "#2e3548";
-    var img =  new Image();
-    img.src = "./img/doc.png";
-        ctx.drawImage(img, paddle.x, paddle.y, paddle.width, paddle.height);
-//    ctx.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
-//     ctx.strokeStyle = "#ffcd05";
-//     ctx.strokeRect(paddle.x, paddle.y, paddle.width, paddle.height);
+    // ctx.fillStyle = "#2e3548";
+    // var img =  new Image();
+    // img.src = "./img/doc.png";
+    //     ctx.drawImage(img, paddle.x, paddle.y, paddle.width, paddle.height);
+   ctx.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
+    ctx.strokeStyle = "#ffcd05";
+    ctx.strokeRect(paddle.x, paddle.y, paddle.width, paddle.height);
 }
 
 // CONTROL THE PADDLE
